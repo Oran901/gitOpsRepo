@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: "{{ .Values.global.values.repo }}"
-    targetRevision: "{{ .Values.global.values.targetRevision }}"
+    repoURL: "{{ .Values.global.chart.repo }}"
+    targetRevision: "{{ .Values.global.chart.targetRevision }}"
     path: charts/app
     helm:
       valueFiles:
