@@ -2,7 +2,7 @@ global:
   environment: dev
   chart:
     # -- Github repositroy it resides in
-    repo: https://github.com/Oran901/gitOpsRepo.git
+    repo: https://github.com/Oran901/devopsAppPoke.git
     # -- Branch/Commit/Tag that we are looking at
     targetRevision: HEAD 
   # -- Points towards the values file used by the environment
