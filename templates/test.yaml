@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: "{{ .Values.global.values.repo }}"
-    targetRevision: HEAD 
+    targetRevision: "{{ .Values.global.values.targetRevision }}"
     path: yada 
     helm:
       valueFiles:
