@@ -9,9 +9,6 @@ spec:
     repoURL: "{{ .Values.global.chart.repo }}"
     targetRevision: "{{ .Values.global.chart.targetRevision }}"
     path: charts/app
-    helm:
-      valueFiles:
-        - $values/environments/{{ .Values.global.environment}}/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: {{ .Values.global.environment }}
