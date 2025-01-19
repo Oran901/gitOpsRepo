@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-{{ .Values.front.image }} 
+  labels:
+    app: {{ .Release.Name }}-{{ .Values.front.image }}
+spec:
+  replicas: {{ .Values.front.replica }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-{{ .Values.front.image }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-{{ .Values.front.image }}
+    spec:
+      restartPolicy: Always
+      containers:
+        - name: {{ .Values.front.image }} 
+          image: {{ .Values.front.repo }}/{{ .Values.front.image }}:{{ .Values.front.tag }}
+          ports:
+            - containerPort: 5002
+              protocol: TCP
+          env:
+            - name: API_URL
+              value: "https://api.{{ .Values.ingress.domain }}/api/quotes"

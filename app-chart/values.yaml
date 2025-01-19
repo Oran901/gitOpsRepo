@@ -1,0 +1,22 @@
+front:
+  repo: "767397954823.dkr.ecr.us-east-1.amazonaws.com"
+  image: "quotes-dev-frontend"
+  tag: "c72649a0e74e0b78fa3b9aa7f926b07c894a3584"
+  port: 5002
+  replica: 2
+
+back:
+  repo: "767397954823.dkr.ecr.us-east-1.amazonaws.com"
+  image: "quotes-dev-backend"
+  tag: "v2"
+  port: 5001
+  replica: 2
+
+ingress:
+  domain: "oyad.store"
+
+secret:
+  db: db-cred
+  endpoint: db-endpoint
+
+environment: "dev"
