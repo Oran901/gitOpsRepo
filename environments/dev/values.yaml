@@ -7,6 +7,6 @@ global:
     targetRevision: HEAD
     # -- Points towards the values file used by the environment
 front:
-  tag: "1c29048c1f1399a7da598533d965c1b9d771d7fc"
+  tag: "a79f083efd109c287da13c22446dbc79502f1d48"
 back:
-  tag: "1c29048c1f1399a7da598533d965c1b9d771d7fc"
+  tag: "a79f083efd109c287da13c22446dbc79502f1d48"
