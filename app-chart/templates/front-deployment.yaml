@@ -24,3 +24,10 @@ spec:
           env:
             - name: API_URL
               value: "https://api.{{ .Values.ingress.domain }}/api/quotes"
+          resources:
+            requests:
+              memory: 256Mi
+              cpu: 100m
+            limits:
+              memory: 256Mi
+              cpu: 100m
