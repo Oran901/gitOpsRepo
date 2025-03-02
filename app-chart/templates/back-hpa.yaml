@@ -2,7 +2,7 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ .Release.Name }}-hpa
+  name: {{ .Release.Name }}-{{ .Values.back.image }}-hpa
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
